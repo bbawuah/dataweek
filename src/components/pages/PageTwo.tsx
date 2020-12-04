@@ -69,7 +69,7 @@ const PageTwo = () => {
          <div className="page-two-container">
             <h2>Gevoel vs realiteit van Amsterdam Zuidoost</h2>
             <p>
-                We hebben een survey rond laten gaan waarin we mensen de mogelijk hebben gegeven om aan te geven welk soort criminaliteit het meeste voorkomt.
+                We hebben een survey rond laten gaan waarin we mensen de mogelijk hebben gegeven om aan te geven welk soort criminaliteit volgens hun het meeste voorkomt.
                 Van deze data en de data van <a href="https://data.politie.nl/#/Politie/nl/dataset/47022NED/table?ts=1607083280811">de politie </a> 
                 hebben we een visualisatie gemaakt en deze met elkaar vergeleken.
             </p>

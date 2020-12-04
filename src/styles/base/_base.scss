@@ -1,0 +1,14 @@
+// DEFAULT STYLING
+// **ALLE MODULES INLADEN IN DEZE FILE
+@import './footer';
+@import './header';
+@import './map';
+@import './home';
+@import './barChart';
+@import './explanation';
+
+body {
+  font-family: $font;
+}
+
+  

@@ -1,0 +1,23 @@
+.map-background {
+    background-color: #fff;
+    color: #000;
+    .page-two-container {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      h2{
+        text-align: center
+      }
+    .map {
+      display: flex;
+      justify-content: space-between;
+      max-width: 80%;
+      .country{
+        cursor: pointer;
+        
+      }
+    }
+
+    }
+}

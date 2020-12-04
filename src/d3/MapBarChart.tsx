@@ -80,6 +80,8 @@ export const MapBarChart: React.FC<BarChartProps> = ({cijfers, buurt}) => {
             svg
               .select(".x-axis")
               .attr('transform', `translate(0, ${height})`)
+              .style("text-anchor", "middle")
+              .text("Aantallen")
               .call(axisBottom(x));
         
             svg
@@ -103,6 +105,7 @@ export const MapBarChart: React.FC<BarChartProps> = ({cijfers, buurt}) => {
         return (
             <div >
               <h3>Jaarcijfers van {buurt}</h3>
+              <p>Een overzicht van de aantallen per soort misdrijf</p>
             <svg ref={svgRef} width={width + margin.left + margin.right}
               height={height + margin.top + margin.bottom}>
                 <g transform={`translate(${margin.left}, ${margin.top})`}>

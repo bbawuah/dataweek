@@ -35,7 +35,6 @@ export const StaticBarChart: React.FC = () => {
         .select(".x-axis")
         .attr('transform', `translate(0, ${height})`)
         .call(axisBottom(x));
-  
       svg
         .select(".y-axis")
         .call(axisLeft(y));

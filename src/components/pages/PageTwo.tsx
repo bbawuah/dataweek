@@ -71,10 +71,12 @@ const PageTwo = () => {
             <div className="barchart-container">
                 <div className="barchart">
                     <h3>Gevoel in zuidoost</h3>
+                    <p>Een overzicht van de aantallen per soort misdrijf</p>
                 <StaticBarChart />
                 </div>
                 <div className="barchart">
                     <h3>Politie cijfers van zuidoost</h3>
+                    <p>Een overzicht van de aantallen per soort misdrijf</p>
                 <BarChart cijfers={barChartData}/>
                 </div>
             </div>
@@ -109,7 +111,7 @@ const PageTwo = () => {
                     </Highlight>
                 </div>
               <h2>De buurten</h2>
-              <p>Hier komt wat tekst</p>
+              <p>Deze buurten hebben we meegenomen in onze visualisatie.</p>
                 </div>
 
             <div className="buurten">
@@ -140,6 +142,7 @@ const PageTwo = () => {
              </div>
             <div className="page-two-container">      
                     <h2>Een kaart van Amsterdam Zuidoost</h2>
+                    <p>Per gebied, kunt u een overzicht van de aantallen per soort misdrijf bekijken</p>
                     <D3Map cijfers={politieCijfers}/>
              </div>
          </Layout>

@@ -85,6 +85,8 @@ export const BarChart: React.FC<BarChartProps> = ({cijfers}) => {
       svg
         .select(".x-axis")
         .attr('transform', `translate(0, ${height})`)
+        .style("text-anchor", "middle")
+        .text("Aantallen")
         .call(axisBottom(x));
   
       svg

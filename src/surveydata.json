@@ -1,50 +1,50 @@
  [
         {
             "misdrijf": "1.1.1 Diefstal/inbraak woning",
-            "count": 21
+            "count": 100
         },
         {
             "misdrijf": "1.2.1 Diefstal uit/vanaf motorvoertuigen",
-            "count": 20
+            "count": 60
         },
         {
             "misdrijf": "2.5.2 Winkeldiefstal",
-            "count": 20
+            "count": 130
         },
         {
             "misdrijf": "1.2.4 Zakkenrollerij",
-            "count": 19
+            "count": 180
         },
         {
             "misdrijf": "1.4.2 Moord, doodslag",
-            "count": 19
+            "count": 50
         },
         {
             "misdrijf": "1.4.3 Openlijk geweld (persoon)",
-            "count": 21
+            "count": 200
         },
         {
             "misdrijf": "1.4.5 Mishandeling",
-            "count": 20
+            "count": 40
         },
         {
             "misdrijf": "1.4.1 Zedenmisdrijf",
-            "count": 18
+            "count": 20
         },
         {
             "misdrijf": "1.6.3 Mensenhandel",
-            "count": 18
+            "count": 10
         },
         {
             "misdrijf": "3.2.1 Kinderporno",
-            "count": 18
+            "count": 30
         },
         {
             "misdrijf": "3.9.3 Fraude (overig)",
-            "count": 19
+            "count": 170
         },
         {
             "misdrijf": "3.7.4 Cybercrime",
-            "count": 18
+            "count": 150
         }
     ]

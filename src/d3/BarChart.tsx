@@ -54,12 +54,25 @@ export const BarChart: React.FC<BarChartProps> = ({cijfers}) => {
         }
       })
 
-      const final = format.filter((d) => d.misdrijf !== '')
+     const valseMisdrijven = LijstMetMisdrijven.filter((misdrijf, index) => {
+        const misdrijven = format.map((m) => m.misdrijf);
+        return misdrijven[index] !== misdrijf
+      })
+
+    const objVanValseMisdrijven = valseMisdrijven.map((misdrijf) => {
+      return {
+        misdrijf,
+        count: 0
+      }
+    })
+    
+
+      const final = format.concat(objVanValseMisdrijven).filter((d) => d.misdrijf !== '')
     
 
       const svg = 
       select(svgRef.current)
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform", "translate(" + 0 + "," + margin.top + ")");
 
       
       const y = scaleBand().range([height, 0]).padding(0.1);
@@ -93,11 +106,14 @@ export const BarChart: React.FC<BarChartProps> = ({cijfers}) => {
   }, [cijfers, period])
 
   return (
-      <div >
+      <div className="svg-container">
         <form className="form">
           <select id="select" name="select" onChange={(value) => setPeriod(value.target.value)}>
             <option value="2020 oktober">2020 oktober</option>
             <option value="2020 september">2020 september</option>
+            <option value="2020 augustus">2020 augustus</option>
+            <option value="2020 juli">2020 juli</option>
+            <option value="2020 juni">2020 juni</option>
           </select>
         </form>
       <svg ref={svgRef} width={width + margin.left + margin.right}

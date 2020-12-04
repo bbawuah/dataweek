@@ -4,9 +4,21 @@ import { NavLink } from 'react-router-dom';
 const Header = () => (
     <header>
         <nav>
-            <NavLink to="/">Intro</NavLink>
-            <NavLink to="/pagetwo">Data</NavLink>
-            <NavLink to="/pagethree">Conclusie</NavLink>
+            <NavLink to="/"
+            exact
+             activeStyle={{
+                fontWeight: "bold",
+                }}>Intro</NavLink>
+            <NavLink to="/pagetwo"
+            activeStyle={{
+                fontWeight: "bold",
+              }}
+            >Data</NavLink>
+            <NavLink to="/pagethree"
+            activeStyle={{
+                fontWeight: "bold",
+              }}
+            >Conclusie</NavLink>
         </nav>
     </header>
 );

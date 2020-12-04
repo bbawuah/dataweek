@@ -11,23 +11,12 @@
     margin: 0 auto;
     justify-content: space-between;
     width: 80%;
+    max-width: 1300px;
     padding: 0 2rem;
     .barchart{
       display: flex;
       flex-direction: column;
       position: relative;
-      .barchart-menu{
-        width: 600px;
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-        li {
-          background-color: rgb(219, 219, 219);
-          padding: .7rem;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-      }
       .staticSvg{
         position: absolute;
         bottom: 0;

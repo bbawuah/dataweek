@@ -15,7 +15,7 @@ const nellestein = Object.values(buurten.nellestein)
 
 const PageTwo = () => {
     const [politieCijfers, setPolitieCijfers] = useState()
-    const [barChartData, setBarChartData] = useState()
+    const [barChartData, setBarChartData] = useState<any[]>()
 
     useEffect(() => {
         const data: any = politieData
@@ -55,9 +55,10 @@ const PageTwo = () => {
             gein: geinArray,
             nellestein: nellesteinArray
         }
+        
 
         setPolitieCijfers(formattedData)
-        setBarChartData(formattedData.centrum)
+        setBarChartData([...centrumArray, ...oostArray, ...holendrechtArray, ...geinArray, ...nellesteinArray])
 
     }, [])
 
@@ -73,13 +74,6 @@ const PageTwo = () => {
                 </div>
                 <div className="barchart">
                     <h3>Politie cijfers van zuidoost</h3>
-                    <ul className="barchart-menu">
-                        <li>centrum</li>
-                        <li>oost</li>
-                        <li>holendrecht</li>
-                        <li>gein</li>
-                        <li>nellestein</li>
-                    </ul>
                 <BarChart cijfers={barChartData}/>
                 </div>
             </div>
@@ -93,34 +87,33 @@ const PageTwo = () => {
 
             <div className="buurten">
                 <div className="buurt">
-                    <p>De buurt Centrum bestaat uit:</p>
+                    <strong><p>De buurt Centrum bestaat uit:</p></strong>
                     <List buurten={centrum}/>
                 </div>
 
                 <div className="buurt">
-                    <p>De buurt Oost bestaat uit:</p>
+                <strong><p>De buurt Oost bestaat uit:</p></strong>
                     <List buurten={oost}/>
                 </div>
              
              <div className="buurt">
-                <p>De buurt Holendrecht bestaat uit:</p>
+             <strong><p>De buurt Holendrecht bestaat uit:</p></strong>
                 <List buurten={holendrecht}/>
              </div>
 
             <div className="buurt">
-            <p>De buurt Gein bestaat uit:</p>
+            <strong><p>De buurt Gein bestaat uit:</p></strong>
               <List buurten={gein}/>
             </div>
                 <div className="buurt">
-                <p>De buurt Nellestein bestaat uit:</p>
+                <strong><p>De buurt Nellestein bestaat uit:</p></strong>
                             <List buurten={nellestein}/>
                 </div>
               </div>
              </div>
-            <div className="page-two-container">
-              <h2>Een kaart van Amsterdam Zuidoost</h2>
-
-               <D3Map cijfers={politieCijfers}/>
+            <div className="page-two-container">      
+                    <h2>Een kaart van Amsterdam Zuidoost</h2>
+                    <D3Map cijfers={politieCijfers}/>
              </div>
          </Layout>
     </div>

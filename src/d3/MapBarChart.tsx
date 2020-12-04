@@ -48,7 +48,20 @@ export const MapBarChart: React.FC<BarChartProps> = ({cijfers, buurt}) => {
                 }
             })
             
-            const final = form.filter((d: any) => d.misdrijf !== '')
+            const valseMisdrijven = LijstMetMisdrijven.filter((misdrijf, index) => {
+              const misdrijven = form.map((m) => m.misdrijf);
+              return misdrijven[index] !== misdrijf
+            })
+      
+          const objVanValseMisdrijven = valseMisdrijven.map((misdrijf) => {
+            return {
+              misdrijf,
+              count: 0
+            }
+          })
+          
+      
+            const final = form.concat(objVanValseMisdrijven).filter((d) => d.misdrijf !== '')
 
             console.log(final)
             
@@ -89,7 +102,7 @@ export const MapBarChart: React.FC<BarChartProps> = ({cijfers, buurt}) => {
       
         return (
             <div >
-              <p>Jaarcijfers van {buurt}</p>
+              <h3>Jaarcijfers van {buurt}</h3>
             <svg ref={svgRef} width={width + margin.left + margin.right}
               height={height + margin.top + margin.bottom}>
                 <g transform={`translate(${margin.left}, ${margin.top})`}>

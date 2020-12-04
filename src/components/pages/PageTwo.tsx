@@ -6,6 +6,7 @@ import { buurten } from '../../format/buurten';
 import { BarChart } from '../../d3/BarChart';
 import { StaticBarChart } from '../../d3/StaticBarChart';
 import { List } from '../layout/List';
+import { Highlight } from '../layout/Highlights';
 
 const centrum = Object.values(buurten.centrum)
 const oost = Object.values(buurten.oost)
@@ -80,7 +81,33 @@ const PageTwo = () => {
             </div>
             <div className="page-two-container">
             <div className="uitleg">
+                <h2>Bevindingen</h2>
+                <div>
+                    <Highlight 
+                    text="Kinderporno is veel in het nieuws, maar kwam in Amsterdam-Zuidoost in het afgelopen jaar niet voor. Er zijn 0 gevallen van kinderporno geregistreerd in die maanden. Veel bewoners hebben het gevoel dat het wel veel voorkomt, bijna net zoveel als alle andere vormen van criminaliteit."
+                    >
+                        <h2>Kinderporno</h2>
+                    </Highlight>
 
+                    <Highlight 
+                    text="Moord en doodslag vind in de beleving van de bewoners veel plaats. In de realiteit vind het enkele keren per maand plaats in Amsterdam-Zuidoost. Moord is de uiting van veel onderliggend geweld. Hier is in een bepaalde mate een voedingsbodem voor in Amsterdam-Zuidoost omdat mishandeling elke maand tientallen keren voorkomt."
+                    >
+                        <h2>Moord en doodslag</h2>
+                    </Highlight>
+                </div>
+                <div>
+                    <Highlight 
+                    text="Winkeldiefstal is een categorie van misdaad waarvan de verwachting klopt met de realiteit. Het komt vrij veel voor in Amsterdam Zuidoost. Aan de ene kant zou het aantal gevallen van winkeldiefstal nog veel hoger kunnen zijn omdat het een relatief eenvoudige misdaad is. Aan de andere kant zou het kunnen dat winkeldiefstal accuraat wordt geregistreerd omdat veel winkels beveiliging hebben geïnstalleerd."
+                    >
+                        <h2>Winkeldiefstal</h2>
+                    </Highlight>
+
+                    <Highlight 
+                    text="Bij Cybercrime is het zo dat het in bepaalde maanden wel voorkomt en in andere maanden niet. Het besef over de wisseling van de frequentie is er waarschijnlijk niet echt bij de bewoners. Wat zorgt ervoor dat een maand meer cybercrime criminaliteit heeft of juist minder?"
+                    >
+                        <h2>Cybercrime</h2>
+                    </Highlight>
+                </div>
               <h2>De buurten</h2>
               <p>Hier komt wat tekst</p>
                 </div>

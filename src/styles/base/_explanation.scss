@@ -2,6 +2,11 @@
     margin: 0 auto;
     width: 80%;
     max-width: 1300px;
+    div {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem 0;
+    }
 }
 
 .buurten {

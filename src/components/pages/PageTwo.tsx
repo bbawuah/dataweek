@@ -89,7 +89,7 @@ const PageTwo = () => {
             <div className="page-two-container">
             <div className="uitleg">
                 <h2>Bevindingen</h2>
-                <div>
+                <div className="highlight-container">
                     <Highlight 
                     text="Kinderporno is veel in het nieuws, maar kwam in Amsterdam-Zuidoost in het afgelopen jaar niet voor. Er zijn 0 gevallen van kinderporno geregistreerd in die maanden. Veel bewoners hebben het gevoel dat het wel veel voorkomt, bijna net zoveel als alle andere vormen van criminaliteit."
                     >
@@ -102,7 +102,7 @@ const PageTwo = () => {
                         <h2>Moord en doodslag</h2>
                     </Highlight>
                 </div>
-                <div>
+                <div className="highlight-container">
                     <Highlight 
                     text="Winkeldiefstal is een categorie van misdaad waarvan de verwachting klopt met de realiteit. Het komt vrij veel voor in Amsterdam Zuidoost. Aan de ene kant zou het aantal gevallen van winkeldiefstal nog veel hoger kunnen zijn omdat het een relatief eenvoudige misdaad is. Aan de andere kant zou het kunnen dat winkeldiefstal accuraat wordt geregistreerd omdat veel winkels beveiliging hebben geïnstalleerd."
                     >
@@ -129,21 +129,26 @@ const PageTwo = () => {
                 <strong><p>De buurt Oost bestaat uit:</p></strong>
                     <List buurten={oost}/>
                 </div>
-             
-             <div className="buurt">
-             <strong><p>De buurt Holendrecht bestaat uit:</p></strong>
-                <List buurten={holendrecht}/>
-             </div>
-
-            <div className="buurt">
-            <strong><p>De buurt Gein bestaat uit:</p></strong>
-              <List buurten={gein}/>
-            </div>
-                <div className="buurt">
-                <strong><p>De buurt Nellestein bestaat uit:</p></strong>
-                            <List buurten={nellestein}/>
-                </div>
               </div>
+               
+               <div className="buurten">
+            
+                <div className="buurt">
+                <strong><p>De buurt Holendrecht bestaat uit:</p></strong>
+                    <List buurten={holendrecht}/>
+                </div>
+
+                <div className="buurt">
+                <strong><p>De buurt Gein bestaat uit:</p></strong>
+                <List buurten={gein}/>
+                </div>
+                    <div className="buurt">
+                    <strong><p>De buurt Nellestein bestaat uit:</p></strong>
+                                <List buurten={nellestein}/>
+                    </div>
+                
+              
+               </div>
              </div>
             <div className="page-two-container">      
                     <h2>Een kaart van Amsterdam Zuidoost</h2>
